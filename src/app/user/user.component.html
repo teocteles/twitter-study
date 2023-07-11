@@ -1,0 +1,90 @@
+<header class="header" role="banner">
+  <h1>Welcome to Twitter Clone</h1>
+  <div class="left-toolbar">
+    <nav class="nav icon-menu" role="navigation">
+      <ul>
+        <li><a class="active" href="/"><i class="fas fa-home"></i><span>Home</span></a></li>
+      </ul>
+    </nav>
+    <nav class="nav mobile-menu">
+      <i class="fas fa-list-ul menu-active-icon"></i>
+      <ul>
+        <li>
+          <a class="active" href="/">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="logo">
+    <a href="/">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+  <div class="search-box">
+    <div class="search-container">
+      <input type="text" size="20" name="search-site" placeholder="Search" />
+      <i class="fas fa-search"></i>
+    </div>
+  </div>
+  <div class="right-toolbar">
+    <nav class="nav icon-menu" role="navigation">
+      <ul>
+        <li>
+          <a href="/"><i class="fas fa-envelope"></i></a>
+        </li>
+        <li>
+          <a href="/"><i class="fas fa-cog"></i></a>
+        </li>
+        <li>
+          <a href="/"><i class="fas fa-feather-alt"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="main" role="main">
+  <div class="main-container">
+    <aside class="sidebar" role="complementary">
+      <section class="profile-meta block">
+        <div class="profile-images">
+          <div class="banner-container">
+            <img class="banner" src="https://picsum.photos/292/147/?random&now={{now}}" height="147" width="292" alt="Picture of fred's gardern" />
+          </div>
+          <div class="portrait-container">
+            <img class="portrait" src="https://picsum.photos/106/117/?random&now={{now}}" height="117" width="106" alt="Picture of Fred" />
+          </div>
+        </div>
+        <div class="profile-about">
+          <div class="name-container">
+            <h2 class="name">{{ user.name }}</h2>
+            <div class="handle">{{ user.handle }}</div>
+          </div>
+          <p class="about">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan eros dolor, non pharetra nibh volutpat vel.
+            In orci lorem, lobortis sed ipsum vel, egestas faucibus nunc. Donec vel ultrices mauris.
+          </p>
+        </div>
+        <div class="profile-stats">
+          <div class="tweet-count cell">
+            <div class="stat-label">Tweets</div>
+            <div class="stat-number">14.2K</div>
+          </div>
+          <div class="following-count cell">
+            <div class="stat-label">Following</div>
+            <div class="stat-number">2.7K</div>
+          </div>
+          <div class="follower-count cell">
+            <div class="stat-label">Follower</div>
+            <div class="stat-number">14.2K</div>
+          </div>
+        </div>
+      </section>
+
+    </aside>
+
+    <app-tweet-feed class="twitter-feed block"></app-tweet-feed>
+  </div>
+</main>
