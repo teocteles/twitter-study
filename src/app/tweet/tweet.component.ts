@@ -5,6 +5,7 @@ import { UserService } from '../user/user.service';
 import { TweetService } from './tweet.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -21,7 +22,8 @@ export class TweetComponent implements OnInit {
   constructor(
     private userService: UserService,
     public tweetService: TweetService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    public router: Router
   ) {}
 
   ngOnInit() {
@@ -46,7 +48,7 @@ export class TweetComponent implements OnInit {
     dialogRef.afterClosed().subscribe(confirmed => {
       if (confirmed) {
         this.tweetService.deletarTweet(index);
-        location.reload();
+        this.router.navigate(['/']);
       }
     });
 
