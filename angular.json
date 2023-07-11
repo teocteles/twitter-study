@@ -9,7 +9,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "twitter-clone": {
+    "twitter-study": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -24,7 +24,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "aot": true,
-            "outputPath": "dist/twitter-clone",
+            "outputPath": "docs/",
             "resourcesOutputPath": "assets",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -73,18 +73,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "twitter-clone:build"
+            "browserTarget": "twitter-study:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "twitter-clone:build:production"
+              "browserTarget": "twitter-study:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "twitter-clone:build"
+            "browserTarget": "twitter-study:build"
           }
         },
         "test": {
