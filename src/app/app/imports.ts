@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MomentModule } from 'ngx-moment';
 
+import { InMemoryService } from '../in-memory-data.service';
+
 import { AppRoutingModule } from '../router/routing.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
@@ -17,6 +19,7 @@ const imports = [
   MatButtonModule,
   FormsModule,
   ReactiveFormsModule,
+  InMemoryService,
   MomentModule.forRoot({
     relativeTimeThresholdOptions: {
       m: 59
